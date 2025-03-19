@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tunechat-backend
+    env: python
+    repo: https://github.com/Baah-Danso-Kenneth/TuneCycle
+    branch: main
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn chatbot_backend.wsgi:application --bind 0.0.0.0:8000"
+    envVars:
+      - fromFile: .env

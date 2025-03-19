@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)$fd@u-0wwcrtrf51zh2sy8396zr6#104f7_$_5ryykglv#0_$'
+SECRET_KEY = config('SECRET_KEY', default='replace-this-in-.env')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     #local Apps
     'chatbot.apps.ChatbotConfig',
     'recommend.apps.RecommendConfig',
-    
+
     #Third Party Apps
     'rest_framework',
     'corsheaders',
@@ -83,13 +83,8 @@ WSGI_APPLICATION = 'chatbot_backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT')
+    "default": {
+        "ENGINE": "django.db.backends.dummy"
     }
 }
 
@@ -136,6 +131,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOWED_ORIGINS=[
-    'http://localhost:3000'
-]
+CORS_ALLOW_ALL_ORIGINS = True
