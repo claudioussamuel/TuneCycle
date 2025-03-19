@@ -24,3 +24,4 @@ class ChatbotView(APIView):
             return Response({"message": FAQ[best_match]})
 
         return Response({"message": "I'm here to help with music leasing and recommendations! Can you clarify your request?"})
+
