@@ -4,7 +4,7 @@ services:
     env: python
     repo: https://github.com/Baah-Danso-Kenneth/TuneCycle
     branch: main
-    buildCommand: "cd chat_backend && ./build.sh"
-    startCommand: "gunicorn chat_backend.wsgi:application --chdir chat_backend --bind 0.0.0.0:8000"
+    buildCommand: "cd chatbot_backend && ./build.sh"
+    startCommand: "gunicorn chatbot_backend.wsgi:application --chdir chatbot_backend --bind 0.0.0.0:8000"
     envVars:
       - fromFile: .env

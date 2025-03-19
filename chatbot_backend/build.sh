@@ -4,8 +4,7 @@
 set -o errexit
 
 
-cd chat_backend
+cd chatbot_backend
 
-# Install dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
