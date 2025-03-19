@@ -4,7 +4,8 @@ FAQ = {
     "What are the pricing plans?": "We offer three plans: Basic, Pro, and Enterprise.",
     "How do I contact support?": "You can contact support at support@example.com.",
     "Where can I find tutorials?": "You can find tutorials in the 'Help' section of the app.",
-    
+
+    # Music NFT Rental-specific questions
     "What is a rental NFT?": "A rental NFT allows users to temporarily access and use digital assets like music tracks without full ownership.",
     "How does the rental process work?": "Users can browse available music NFTs, select a track, and rent it for a specified period using smart contracts.",
     "Which blockchain is this platform built on?": "Our platform runs on Ethereum and Layer 2 solutions for lower transaction fees and faster processing.",
